@@ -38,11 +38,6 @@
 <body>
     <h1>Eager Loading Demo</h1>
 
-    <nav style="margin-bottom: 24px;">
-        |
-        <a href="{{ route('dashboard') }}">Dashboard</a>
-        |
-    </nav>
 
     <div class="info">
         <p>
