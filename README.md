@@ -113,33 +113,43 @@ Fitur yang dikerjakan meliputi:
 
 ## Dokumentasi Query Tinker
 
-Sertakan dokumentasi lima query Tinker beserta screenshot hasilnya sesuai ketentuan tugas.
-
-Simpan screenshot dalam folder `screenshots/`, contohnya:
-
-- `screenshots/tinker-01.png`
-- `screenshots/tinker-02.png`
-- `screenshots/tinker-03.png`
-- `screenshots/tinker-04.png`
-- `screenshots/tinker-05.png`
-
-Contoh menampilkan gambar:
-
-```md
-![Query Tinker 1](screenshots/tinker-01.png)
-```
+- Query Tinker 1
+![Query Tinker 1](Screenshot_TR11_Query1.png)
+- Query Tinker 2
+![Query Tinker 2](Screenshot_TR11_Query2.png)
+- Query Tinker 3
+![Query Tinker 3](Screenshot_TR11_Query3.png)
+- Query Tinker 4
+![Query Tinker 4](Screenshot_TR11_Query4.png)
+- Query Tinker 5
+![Query Tinker 5](Screenshot_TR11_Query5.png)
 
 ## Screenshot Aplikasi
 
-Tambahkan screenshot yang memperlihatkan:
-
 - Halaman Home.
-- Login dan register.
+![Home_Page](Screenshot_TR11_Home.png)
+  
+- Login.
+![Login_Page](Screenshot_TR11_Login.png)
+  
+- Register.
+![Register_Page](Screenshot_TR11_Register.png)
+  
 - Dashboard pengguna.
+![Dashboard_Page](Screenshot_TR11_Dashboard.png)
+
 - Katalog produk.
+![Katalog_Page](Screenshot_TR11_Katalog.png)
+
 - Panel admin Filament.
+![Admin_Page](Screenshot_TR11_Admin.png)
+
 - Pengujian pembatasan akses berdasarkan role.
+![NotAdmin_Page](Screenshot_TR11_NotAdmin.png)
+
 - Eager loading demo.
+![Eager_Loading_Demo_Page](Screenshot_TR11_ELPage.png)
+  
 
 ## Keamanan
 
