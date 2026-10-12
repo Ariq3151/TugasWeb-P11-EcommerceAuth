@@ -1,59 +1,153 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Tugas Rutin 11 — E-Commerce DB + Secure Auth
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Identitas Proyek
 
-## About Laravel
+- **Nama Tugas:** Tugas Rutin 11 — E-Commerce DB + Secure Auth
+- **Repository:** `TugasWeb-P11-EcommerceAuth`
+- **Framework:** Laravel
+- **Database:** MySQL
+- **Autentikasi:** Laravel Breeze
+- **Admin Panel:** Filament
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Deskripsi
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Proyek ini merupakan aplikasi E-Commerce yang dikembangkan menggunakan Laravel. Proyek berfokus pada perancangan database relasional, Eloquent ORM, autentikasi pengguna, sistem multi-role, serta pembatasan akses menggunakan middleware dan policy.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Bagian A — Database dan Eloquent
 
-## Learning Laravel
+Implementasi yang dikerjakan meliputi:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- Migration untuk tabel-tabel E-Commerce beserta foreign key.
+- Factory dan seeder untuk menghasilkan data produk.
+- Model Eloquent dan relasi antarmodel.
+- Penggunaan scope pada model.
+- Pengujian dan dokumentasi query menggunakan Tinker.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Bagian B — Autentikasi dan Keamanan
 
-## Laravel Sponsors
+Fitur yang dikerjakan meliputi:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Login, register, dan logout menggunakan Laravel Breeze.
+- Role pengguna: `admin`, `editor`, dan `user`.
+- Custom middleware untuk pembatasan akses berdasarkan role.
+- `PostPolicy` untuk otorisasi pengeditan dan penghapusan post.
+- Proteksi route dan pengujian menggunakan akun dengan role berbeda.
 
-### Premium Partners
+## Bonus
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Panel administrasi Filament.
+- Pengelolaan produk dan kategori melalui Filament.
+- Demonstrasi eager loading menggunakan relasi kategori produk.
 
-## Contributing
+## Teknologi
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- PHP
+- Laravel
+- MySQL
+- Eloquent ORM
+- Laravel Breeze
+- Filament
+- Composer
+- Vite dan npm jika diperlukan oleh aset frontend.
 
-## Code of Conduct
+## Persiapan dan Instalasi
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Pastikan PHP, Composer, Node.js/npm, dan MySQL tersedia sesuai kebutuhan proyek.
+2. Clone repository dan masuk ke folder proyek.
+3. Instal dependency PHP:
 
-## Security Vulnerabilities
+   ```bash
+   composer install
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+4. Salin `.env.example` menjadi `.env`.
+5. Buat database MySQL dengan nama `tugasweb_p11` atau sesuaikan dengan konfigurasi database pada `.env`.
+6. Buat application key:
 
-## License
+   ```bash
+   php artisan key:generate
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7. Jalankan migration:
+
+   ```bash
+   php artisan migrate
+   ```
+
+8. Jika seeder proyek telah disiapkan, jalankan sesuai kebutuhan:
+
+   ```bash
+   php artisan db:seed
+   ```
+
+9. Instal dependency frontend jika diperlukan:
+
+   ```bash
+   npm install
+   ```
+
+10. Jalankan Vite jika diperlukan:
+
+    ```bash
+    npm run dev
+    ```
+
+11. Jalankan aplikasi:
+
+    ```bash
+    php artisan serve
+    ```
+
+12. Buka `http://127.0.0.1:8000`.
+
+## Halaman Aplikasi
+
+- `/` — halaman Home.
+- `/login` — login pengguna biasa.
+- `/register` — registrasi pengguna.
+- `/dashboard` — dashboard pengguna yang telah login dan memenuhi middleware route.
+- `/products` — katalog produk.
+- `/eager-loading-demo` — demonstrasi eager loading.
+- `/admin/login` — halaman login panel Filament.
+- `/admin` — panel administrasi yang dibatasi untuk admin.
+
+## Dokumentasi Query Tinker
+
+Sertakan dokumentasi lima query Tinker beserta screenshot hasilnya sesuai ketentuan tugas.
+
+Simpan screenshot dalam folder `screenshots/`, contohnya:
+
+- `screenshots/tinker-01.png`
+- `screenshots/tinker-02.png`
+- `screenshots/tinker-03.png`
+- `screenshots/tinker-04.png`
+- `screenshots/tinker-05.png`
+
+Contoh menampilkan gambar:
+
+```md
+![Query Tinker 1](screenshots/tinker-01.png)
+```
+
+## Screenshot Aplikasi
+
+Tambahkan screenshot yang memperlihatkan:
+
+- Halaman Home.
+- Login dan register.
+- Dashboard pengguna.
+- Katalog produk.
+- Panel admin Filament.
+- Pengujian pembatasan akses berdasarkan role.
+- Eager loading demo.
+
+## Keamanan
+
+- Jangan mengunggah file `.env`.
+- Jangan memasukkan password atau kredensial database ke README.
+- Pastikan route yang dilindungi tetap menggunakan middleware dan otorisasi yang sesuai.
+- Pengguna dengan role `user` tidak boleh mendapatkan akses panel admin.
+
+## Repository
+
+`TugasWeb-P11-EcommerceAuth`
